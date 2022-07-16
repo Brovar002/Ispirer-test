@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="com.example.webtask.entities.Counter"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +19,11 @@
     <fmt:message key="lang.eng"/></option>
     <option value="ru"> <fmt:message key="lang.ru"/></option>
 </select>
-<input  type="button" id="MyButton"  value="OK">  <fmt:message key="select"/>
-</input>
+<button  type="button" id="MyButton"  value="OK">  <fmt:message key="select"/>
+</button>
+<%new Counter();%>
+<h3> <fmt:message key="count"/>  <%out.println(Counter.getClassCount());%></h3>
+<p><fmt:message key="count.add"/></p>
 </body>
 <script type="text/javascript">
     $(document).ready(function () {
