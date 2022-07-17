@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <title>Index</title>
 </head>
@@ -17,9 +18,9 @@
             <fmt:message key="lang.eng"/></option>
         <option value="ru"> <fmt:message key="lang.ru"/></option>
     </select>
-    <button  type="button" id="MyButton"  value="OK">  <fmt:message key="select"/>
+    <button class="btn btn-sm"  type="button" id="MyButton"  value="OK">  <fmt:message key="select"/>
     </button>
-    <button type="button" onclick="location.href='/'"><fmt:message key="home"/></button>
+    <button class="btn btn-sm" type="button" onclick="location.href='/'"><fmt:message key="home"/></button>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#MyButton").click(function () {
