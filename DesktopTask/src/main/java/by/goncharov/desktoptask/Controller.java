@@ -17,7 +17,7 @@ public class Controller {
     @FXML
     private Label addText;
     @FXML
-    private Label listAll;
+    private TextArea listAll;
     @FXML
     private Label welcomeText;
     @FXML
@@ -33,11 +33,17 @@ public class Controller {
     @FXML
     private Label listUsrLabel;
     @FXML
+    private TextArea changedText;
+    @FXML
     private Button selectButton;
     @FXML
     private Button counterButton;
     @FXML
     private Button listusrButton;
+    @FXML
+    private Button listenerOn;
+    @FXML
+    private Button listenerOff;
     @FXML
     private Menu menu;
 
@@ -73,7 +79,7 @@ public class Controller {
     }
     @FXML
     private void addList() {
-       list.add(listElement.getText());
+        changedText.setText(list.add(listElement.getText()));
         sizeLabel.setText(String.valueOf(list.getSize()));
         listAll.setText(list.show());
     }
@@ -84,7 +90,14 @@ public class Controller {
         welcomeText.setText("");
         initializeElements();
     }
-
+    @FXML
+    private void addListener() {
+        list.addChangedListener();
+    }
+    @FXML
+    private void removeListener() {
+        list.removeChangedListener();
+    }
     private void initializeElements() {
         selectButton.setText(resourceBundle.getString("select"));
         menu.setText(resourceBundle.getString("language.change"));
@@ -97,6 +110,8 @@ public class Controller {
         countText.setText(resourceBundle.getString("count"));
         sizeText.setText(resourceBundle.getString("list.size"));
         listUsrLabel.setText(resourceBundle.getString("listusr"));
+        listenerOn.setText(resourceBundle.getString("listener.add"));
+        listenerOff.setText(resourceBundle.getString("listener.remove"));
     }
 
     @FXML

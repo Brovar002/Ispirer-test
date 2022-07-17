@@ -6,18 +6,19 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="616.0" style="-fx-background-color: #E4E6C3;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.goncharov.desktoptask.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="660.0" style="-fx-background-color: #E4E6C3;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.goncharov.desktoptask.Controller">
    <children>
       <Button fx:id="selectButton" layoutX="182.0" layoutY="126.0" mnemonicParsing="false" onAction="#welcome" prefHeight="46.0" prefWidth="233.0" style="-fx-background-color: #F7F7F2;" text="Say hello">
          <font>
             <Font size="23.0" />
          </font>
       </Button>
-      <MenuBar layoutX="-2.0" layoutY="1.0" prefHeight="27.0" prefWidth="618.0" style="-fx-background-color: #F7F7F2;">
+      <MenuBar layoutX="-2.0" layoutY="1.0" prefHeight="27.0" prefWidth="660.0" style="-fx-background-color: #F7F7F2;">
          <menus>
             <Menu fx:id="menu" mnemonicParsing="false" text="Language">
               <items>
@@ -30,34 +31,33 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </MenuBar>
-      <Button fx:id="counterButton" layoutX="109.0" layoutY="229.0" mnemonicParsing="false" onAction="#counter" text="Button" />
+      <Button fx:id="counterButton" layoutX="110.0" layoutY="279.0" mnemonicParsing="false" onAction="#counter" prefHeight="35.0" prefWidth="65.0" text="Button" />
       <Label fx:id="welcomeText" alignment="CENTER" layoutY="54.0" prefHeight="65.0" prefWidth="596.0" text="Hello!" textAlignment="CENTER" textFill="#222725">
          <font>
             <Font size="33.0" />
          </font>
       </Label>
       <Button fx:id="listusrButton" layoutX="515.0" layoutY="229.0" mnemonicParsing="false" onAction="#addList" text="Button" />
-      <Label fx:id="classCount" layoutX="109.0" layoutY="329.0" prefHeight="46.0" prefWidth="82.0" />
+      <Label fx:id="classCount" layoutX="124.0" layoutY="352.0" prefHeight="46.0" prefWidth="82.0" />
       <Label fx:id="counter" layoutX="32.0" layoutY="188.0" prefHeight="35.0" prefWidth="155.0">
          <font>
             <Font size="12.0" />
          </font>
       </Label>
-      <Label fx:id="addText" layoutX="15.0" layoutY="228.0" prefHeight="100.0" prefWidth="82.0">
+      <Label fx:id="addText" layoutX="14.0" layoutY="215.0" prefHeight="130.0" prefWidth="82.0" wrapText="true">
          <font>
-            <Font size="10.0" />
+            <Font size="12.0" />
          </font>
       </Label>
-      <Label fx:id="countText" alignment="TOP_LEFT" layoutX="15.0" layoutY="329.0" prefHeight="46.0" prefWidth="155.0">
-         <font>
-            <Font size="9.0" />
-         </font>
-      </Label>
+      <Label fx:id="countText" alignment="TOP_LEFT" layoutX="20.0" layoutY="352.0" prefHeight="46.0" prefWidth="155.0" wrapText="true" />
       <TextField fx:id="listElement" layoutX="335.0" layoutY="229.0" />
-      <Label fx:id="sizeText" layoutX="335.0" layoutY="287.0" prefHeight="27.0" prefWidth="132.0" />
-      <Label fx:id="sizeLabel" layoutX="500.0" layoutY="292.0" />
-      <Label fx:id="listAll" alignment="TOP_LEFT" layoutX="351.0" layoutY="329.0" prefHeight="65.0" prefWidth="250.0" />
+      <Label fx:id="sizeText" layoutX="319.0" layoutY="279.0" prefHeight="27.0" prefWidth="160.0" />
+      <Label fx:id="sizeLabel" layoutX="472.0" layoutY="284.0" prefHeight="17.0" prefWidth="14.0" />
       <Label fx:id="listUsrLabel" layoutX="336.0" layoutY="188.0" prefHeight="35.0" prefWidth="180.0" />
+      <Button fx:id="listenerOn" layoutX="489.0" layoutY="469.0" mnemonicParsing="false" onAction="#addListener" text="Button" />
+      <Button fx:id="listenerOff" layoutX="489.0" layoutY="536.0" mnemonicParsing="false" onAction="#removeListener" text="Button" />
+      <TextArea fx:id="changedText" layoutX="170.0" layoutY="448.0" prefHeight="130.0" prefWidth="298.0" />
+      <TextArea fx:id="listAll" layoutX="336.0" layoutY="341.0" prefHeight="80.0" prefWidth="264.0" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
