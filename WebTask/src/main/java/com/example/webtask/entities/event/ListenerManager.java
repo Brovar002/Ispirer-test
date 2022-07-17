@@ -1,13 +1,10 @@
 package com.example.webtask.entities.event;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ListenerManager {
     List<String> messages = new ArrayList<>();
-    Map<ListenerType, List<ChangedListener>> listeners = new HashMap<>();
+    EnumMap<ListenerType, List<ChangedListener>> listeners = new EnumMap<>(ListenerType.class);
 
     public ListenerManager(ListenerType... types) {
         for (ListenerType operation : types) {
